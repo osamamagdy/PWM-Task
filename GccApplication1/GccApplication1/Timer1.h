@@ -9,6 +9,8 @@
 #ifndef TIMER1_H_
 #define TIMER1_H_
 
+#define OCFA 1
+#define OCFB 2
 
 void Timer1Init(void);
 

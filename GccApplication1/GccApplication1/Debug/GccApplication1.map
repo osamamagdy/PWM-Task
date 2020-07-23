@@ -161,7 +161,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000       0xd0
+.text           0x00000000      0x136
  *(.vectors)
  .vectors       0x00000000       0x68 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega328p/avr5/crtatmega328p.o
                 0x00000000                __vector_default
@@ -247,16 +247,16 @@ END GROUP
  .text.GPIOInit
                 0x00000080        0x8 GPIO.o
                 0x00000080                GPIOInit
- .text.main     0x00000088        0xa main.o
+ .text.main     0x00000088       0x74 main.o
                 0x00000088                main
  .text.Timer1Init
-                0x00000092       0x3a Timer1.o
-                0x00000092                Timer1Init
-                0x000000cc                . = ALIGN (0x2)
+                0x000000fc       0x36 Timer1.o
+                0x000000fc                Timer1Init
+                0x00000132                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x000000cc        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
-                0x000000cc                _exit
-                0x000000cc                exit
+ .fini9         0x00000132        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+                0x00000132                _exit
+                0x00000132                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -275,11 +275,11 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x000000cc        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+ .fini0         0x00000132        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x000000d0                _etext = .
+                0x00000136                _etext = .
 
-.data           0x00800100        0x0 load address 0x000000d0
+.data           0x00800100        0x0 load address 0x00000136
                 [!provide]                PROVIDE (__data_start, .)
  *(.data)
  *(.data*)
@@ -297,8 +297,8 @@ END GROUP
  *(.bss*)
  *(COMMON)
                 [!provide]                PROVIDE (__bss_end, .)
-                0x000000d0                __data_load_start = LOADADDR (.data)
-                0x000000d0                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x00000136                __data_load_start = LOADADDR (.data)
+                0x00000136                __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x00800100        0x0
                 [!provide]                PROVIDE (__noinit_start, .)
@@ -383,26 +383,26 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000      0x7b3
+.debug_info     0x00000000      0x7c9
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0x5f4 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega328p/avr5/crtatmega328p.o
  .debug_info    0x000005f4       0x83 GPIO.o
- .debug_info    0x00000677       0xae main.o
- .debug_info    0x00000725       0x8e Timer1.o
+ .debug_info    0x00000677       0xc4 main.o
+ .debug_info    0x0000073b       0x8e Timer1.o
 
-.debug_abbrev   0x00000000      0x6ac
+.debug_abbrev   0x00000000      0x6b9
  *(.debug_abbrev)
  .debug_abbrev  0x00000000      0x5a2 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega328p/avr5/crtatmega328p.o
  .debug_abbrev  0x000005a2       0x51 GPIO.o
- .debug_abbrev  0x000005f3       0x68 main.o
- .debug_abbrev  0x0000065b       0x51 Timer1.o
+ .debug_abbrev  0x000005f3       0x75 main.o
+ .debug_abbrev  0x00000668       0x51 Timer1.o
 
-.debug_line     0x00000000      0x2ea
+.debug_line     0x00000000      0x37b
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x00000000      0x133 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega328p/avr5/crtatmega328p.o
  .debug_line    0x00000133       0xa1 GPIO.o
- .debug_line    0x000001d4       0x5b main.o
- .debug_line    0x0000022f       0xbb Timer1.o
+ .debug_line    0x000001d4       0xec main.o
+ .debug_line    0x000002c0       0xbb Timer1.o
 
 .debug_frame    0x00000000       0x6c
  *(.debug_frame)
@@ -415,9 +415,9 @@ END GROUP
  .debug_str     0x00000000      0x208 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega328p/avr5/crtatmega328p.o
  .debug_str     0x00000208      0x14e GPIO.o
                                 0x182 (size before relaxing)
- .debug_str     0x00000356       0x1c main.o
-                                0x18a (size before relaxing)
- .debug_str     0x00000372       0x17 Timer1.o
+ .debug_str     0x00000356       0x25 main.o
+                                0x19b (size before relaxing)
+ .debug_str     0x0000037b        0xe Timer1.o
                                 0x18f (size before relaxing)
 
 .debug_loc

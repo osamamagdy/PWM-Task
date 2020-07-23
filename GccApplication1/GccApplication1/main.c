@@ -24,6 +24,20 @@ int main(void)
     while (1) 
     {
 		
+		
+			while((  ( TCNT1>=50 ) & ( TCNT1 <= 60 ) ) || (  ( TCNT1<=50 ) & ( TCNT1 >= 40 ) ) )
+			{
+				if (TCNT1 >= 50 )
+				{
+					PORTB &= ~(1<<2);
+				}
+				
+				if (TCNT1 <= 50 )
+				{
+					PORTB |= (1<<2);
+				}
+			}		
+		
     }
 }
  

@@ -14,6 +14,6 @@ void Timer1Init()
 	TCCR1B |= (1<<WGM13) | (1<<CS10); //And setting prescaler to none
 	ICR1 = 100; // Setting the TOP count to have a priodic time 200 us
 	OCR1A = 50 ;// The duty cycle is 50%
-	OCR1B = 60;
+	OCR1B = 50;
 	
 }
