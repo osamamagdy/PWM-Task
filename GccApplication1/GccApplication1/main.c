@@ -25,7 +25,7 @@ int main(void)
     {
 		
 		
-			while((  ( TCNT1>=50 ) & ( TCNT1 <= 60 ) ) || (  ( TCNT1<=50 ) & ( TCNT1 >= 40 ) ) )
+			/*while((  ( TCNT1>=50 ) & ( TCNT1 <= 60 ) ) || (  ( TCNT1<=50 ) & ( TCNT1 >= 40 ) ) )
 			{
 				if (TCNT1 >= 50 )
 				{
@@ -37,6 +37,7 @@ int main(void)
 					PORTB |= (1<<2);
 				}
 			}		
+			*/
 		
     }
 }
