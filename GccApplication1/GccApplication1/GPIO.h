@@ -8,8 +8,8 @@
 
 #ifndef GPIO_H_
 #define GPIO_H_
-#define OC1A 1
-#define OC1B 2
+#define OC1A 1 // The output pin 1 in port B
+#define OC1B 2 // The output pin 2 in port B
 
 void GPIOInit (void);
 

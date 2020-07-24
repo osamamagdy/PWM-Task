@@ -23,22 +23,11 @@ int main(void)
     /* Replace with your application code */
     while (1) 
     {
-		
-		
-			/*while((  ( TCNT1>=50 ) & ( TCNT1 <= 60 ) ) || (  ( TCNT1<=50 ) & ( TCNT1 >= 40 ) ) )
-			{
-				if (TCNT1 >= 50 )
-				{
-					PORTB &= ~(1<<2);
-				}
-				
-				if (TCNT1 <= 50 )
-				{
-					PORTB |= (1<<2);
-				}
-			}		
-			*/
-		
+		/*
+		We don't need to write any code in here, 
+		we configure our registers to automatically generate pulses when the counter reaches the value of OCRnX.
+		Anyway, we must make an infinite loop inside the main function to make the micro controller works repeatedly
+		*/
     }
 }
  

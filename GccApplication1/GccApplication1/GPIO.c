@@ -10,5 +10,6 @@
 
 void GPIOInit(void)
 {
+	// Configuring the direction of OC1A & OC1B as output pins
 	DDRB |= (1<<OC1A) | (1<<OC1B);
 }
